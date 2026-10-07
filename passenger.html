@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UPSRTC Live Bus</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head><body>
+<header><h1>🚌 UPSRTC Live Bus</h1><small>Track your bus in real time</small></header>
+<div class="app">
+ <div class="card"><div class="row">
+  <div><label>Route</label><select id="route"></select></div>
+  <div><label>My stop</label><select id="stop"></select></div></div></div>
+ <div id="map"></div>
+ <div class="card"><b>Buses on this route</b><div id="list" class="note">Looking for live buses…</div></div>
+ <p class="note">Data © OpenStreetMap contributors. ETA is approximate.</p>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="firebase-config.js"></script><script src="routes.js"></script>
+<script src="geo.js"></script><script src="passenger.js"></script></body></html>

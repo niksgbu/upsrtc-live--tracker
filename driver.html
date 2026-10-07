@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UPSRTC Driver</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1>🚌 UPSRTC Driver App</h1><small>Share your bus location with passengers</small></header>
+<div class="app">
+ <div id="login" class="card" hidden><form id="loginForm">
+  <label>Email</label><input id="email" type="email" required autocomplete="username">
+  <label>Password</label><input id="pw" type="password" required autocomplete="current-password">
+  <button>Log in</button><div id="lerr" class="err"></div></form>
+  <p class="note">Driver accounts are created by the depot admin.</p></div>
+ <div id="trip" class="card" hidden>
+  <div class="note">Logged in: <span id="who"></span></div>
+  <label>Route</label><select id="route"></select>
+  <label>Bus number</label><input id="busNo" value="UP32 AB 1234" maxlength="14">
+  <button id="start">▶ Start trip (share GPS)</button>
+  <button id="sim" class="alt">Test with simulated GPS</button>
+  <button id="stop" class="dark" hidden>■ End trip</button>
+  <div id="status" class="note" style="margin-top:10px">Not sharing.</div>
+  <button id="logout" class="alt">Log out</button>
+ </div>
+ <p class="note">Keep this screen open and on during the trip — phones pause GPS in the background.</p>
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="firebase-config.js"></script><script src="routes.js"></script>
+<script src="geo.js"></script><script src="driver.js"></script></body></html>
